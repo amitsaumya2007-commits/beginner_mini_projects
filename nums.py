@@ -1,0 +1,15 @@
+nums = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+sums = []
+target = 12
+left = 1
+right = len(nums)
+for num in nums:
+    for i in nums:
+        if i+num == target:
+            sums.append((i,num))
+        left += 1
+        right -= 1
+while left  < right:
+    continue
+
+print(sums)
