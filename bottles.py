@@ -1,21 +1,15 @@
-
-
 def bottles():
     count = 99
-    for lyrics in range(count,1,-1):
+    for lyrics in range(count,0,-1):
+        if lyrics >2:
+            suffix = "s"
+        elif lyrics < 2:
+            suffix = ""
+        end_phrase = f"{lyrics -1} bottle{suffix} of beer on the wall" if lyrics != 1 else f"no more bottles of beer.\n Go to the store and buy some more, {count} bottles of beer on the wall."
         
-        if lyrics > 2:
-            yield f"""[Verse {count - lyrics+1}]
-    {lyrics} bottles of beer on the wall, {lyrics} bottles of beer
-    Take one down and pass it around, {lyrics -1} bottles of beer on the wall"""
-        elif lyrics == 2:
-            yield f"""[Verse {count-lyrics+1}]
-    {lyrics} bottles of beer on the wall, {lyrics} bottles of beer
-    Take one down and pass it around, {lyrics -1} bottle of beer on the wall"""
-        else:
-            yield f"""[Verse {count-lyrics+1}]
-    {lyrics} bottle of beer on the wall, {lyrics} bottls of beer
-    Take one down and pass it around, no more bottles of beer on the wall"""
+        yield f"""[Verse {count - lyrics+1}]
+    {lyrics} bottle{suffix} of beer on the wall, {lyrics} bottle{suffix} of beer
+    Take one down and pass it around, {end_phrase}"""
      
 obj = bottles()
 for all_bottles in obj:

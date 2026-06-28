@@ -1,40 +1,31 @@
 # Python Learning Workspace
 
-This directory contains small Python practice files and learning exercises used to explore Python fundamentals and small projects.
+This directory contains small, independent Python practice scripts and learning exercises used to explore Python fundamentals and small projects.
 
 ## Current files
 
-- `g_problems.py`
-  - A collection of problem solutions and small functions (consolidated from earlier exercise files).
+- bottles.py — prints the "99 bottles of beer" lyrics using a generator.
+- g_problems.py — assorted examples: generators, chunking, sliding windows, paragraph splitting, and small helpers.
+- vowel_counter.py — interactive vowel counter (uses input()).
+- num_guess.py — interactive number-guessing game with difficulty levels.
+- experiments.py — example age calculator demonstration.
+- magic_8_ball.py — interactive Magic 8-Ball toy.
+- mean_median_mode.py — utility functions for mean, median, and mode with example usage.
+- menu_calculator.py — simple ordering/total calculator (interactive).
+- rck_ppr_scr.py — rock-paper-scissors game (interactive).
+- requirements.txt — optional third-party dependencies (if any).
 
-- `bottles.py`
-  - A program that prints the lyrics of  99 bottles of beer using a genrator function and loops
+## Notes
 
-- `vowel_counter.py`
-  - Counts vowels in user-provided text and demonstrates simple I/O and string processing.
-
-- `requirements.txt`
-  - Lists third-party dependencies (if any).
-
-- `venv/` (optional)
-  - Local virtual environment directory (not tracked in source).
-
-## Notes about recent changes
-
-Several older, single-purpose exercise files were removed or consolidated into the files above as part of a reorganization. If you relied on a specific older filename, search the repository history to locate its previous contents.
-
-## Purpose
-
-This workspace is intended for learning and experimenting with Python. It is not a production project, but a place to build understanding through hands-on code.
+- Most files contain top-level, interactive code and are intended to be run as scripts: `python3 <filename>.py`.
+- When converting files into importable modules, move interactive sections under `if __name__ == "__main__":` to avoid running on import.
+- A local virtual environment (`venv/`) may exist locally and is not tracked in source.
 
 ## How to use
 
-1. Activate the virtual environment if available:
-   ```bash
+1. (Optional) Activate the virtual environment:
    source venv/bin/activate
-   ```
-2. Run any Python file using:
-   ```bash
-   python3 <filename>.py
-   ```
-3. Modify or extend the files to add new learning examples.
+2. Run a script:
+   python3 bottles.py
+
+
